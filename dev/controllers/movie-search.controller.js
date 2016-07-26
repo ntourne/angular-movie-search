@@ -1,2 +1,14 @@
-angular.module('movie-search-app', [])
-    .controller('MovieSearchController')
+angular.module('app', [])
+
+    .controller('MovieSearchController', function() {
+
+        var vm = this;
+
+        vm.query = "";
+
+        vm.search = function() {
+            alert(vm.query);
+        }
+
+
+    });
