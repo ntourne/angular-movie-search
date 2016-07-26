@@ -3,7 +3,8 @@
     var app = angular.module('moviesearch', [
         'moviesearch.controllers',
         'moviesearch.services',
-        'moviesearch.directives'
+        'moviesearch.directives',
+        'moviesearch.filters'
     ]);
 
 })();

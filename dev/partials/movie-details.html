@@ -1,16 +1,17 @@
 <div class="col-lg-6">
     <div class="row">
         <div class="col-xs-6 col-md-3">
-            <a href="http://www.imdb.com/title/{{vm.movie.imdbID}}" target="_blank" class="thumbnail">
-                <img src="{{vm.movie.Poster}}" alt="...">
+            <a href="{{vm.movie.imdbID | imdblink}}" target="_blank" class="thumbnail">
+                <img ng-src="{{vm.movie.Poster}}" alt="{{vm.movie.Title}}">
             </a>
         </div>
         <div class="col-xs-8">
-            <div class="title"><b>{{vm.movie.Title}}</b> ({{vm.movie.Year}})</div>
+            <div class="title">{{vm.movie.Title}}</div>
+            <div>Year: {{vm.movie.Year}}</div>
             <div>Genre: {{vm.movie.Genre}}</div>
             <div>Director: {{vm.movie.Director}}</div>
             <div>Actors: {{vm.movie.Actors}}</div>
-            <div class="imdb-link"><a href="http://www.imdb.com/title/{{vm.movie.imdbID}}" target="_blank">View on IMDB</a></div>
+            <div class="imdb-link"><a href="{{vm.movie.imdbID | imdblink}}" target="_blank">View on IMDB</a></div>
         </div>
     </div>
 </div>
