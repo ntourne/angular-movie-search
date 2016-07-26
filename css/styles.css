@@ -1,0 +1,21 @@
+.header {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    margin-bottom: 15px;
+}
+
+.movie-details {
+    
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 12px 0 6px 0;
+}
+
+.imdb-link {
+    margin-top: 10px;
+}
