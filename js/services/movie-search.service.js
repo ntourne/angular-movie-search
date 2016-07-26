@@ -12,7 +12,7 @@ angular.module('moviesearch.services', [])
         vm.getMovieDetails = function(title) {
             var getData = {
                 method: 'jsonp',
-                url: 'http://www.omdbapi.com/?t=' + title, //add +'&apikey=YOUR_API_KEY' if you have one.
+                url: 'https://www.omdbapi.com/?t=' + title, //add +'&apikey=YOUR_API_KEY' if you have one.
                 headers: {
                     'Content-Type': undefined
                 },
