@@ -16,7 +16,6 @@ angular.module('moviesearch.controllers', [])
             movieSearchService.getMovieDetails(vm.query)
                 .success(function (data) {
 
-                    console.log(data);
                     // if movie exists
                     if (data && data.Response == "True") {
                         vm.movie = data;
