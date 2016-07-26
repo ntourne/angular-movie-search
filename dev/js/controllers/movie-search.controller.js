@@ -10,49 +10,35 @@ angular.module('moviesearch.controllers', [])
         vm.query = "";
         vm.movie = null;
 
+
         // Methods
+
+        /**
+         * Search movies
+         * @return response
+         */
         vm.search = function() {
 
+            /**
+             * Call to OMDB API sending the query that user input
+             * @param  string vm.query
+             * @return response
+             */
             movieSearchService.getMovieDetails(vm.query)
                 .success(function (data) {
 
-                    console.log(data);
-                    // if movie exists
+                    // if movie found
                     if (data && data.Response == "True") {
                         vm.movie = data;
                         if (vm.movie.Poster == "N/A")
                             vm.movie.Poster = "http://placehold.it/300x444"
                     }
 
-
+                    // if movie not found or error, show alert message
                     else
                         alert("Movie not found. Please, try with another title")
                 });
         }
-
-
-        /*
-        Actors: "Joshua Miller"
-        Awards: "N/A"
-        Country: "USA"
-        Director: "Ryan McDonald"
-        Genre: "Short, Action"
-        Language: "English"
-        Metascore: "N/A"
-        Plot: "N/A"
-        Poster: "N/A"
-        Rated: "N/A"
-        Released: "01 Apr 2001"
-        Response:"True"
-        Runtime: "N/A"
-        Title: "Terminator"
-        Type: "movie"
-        Writer: "Ryan McDonald"
-        Year: "2001"
-        imdbID: "tt1994570"
-        imdbRating: "4.8"
-        imdbVotes: "16"
-        */
 
     }]);
 

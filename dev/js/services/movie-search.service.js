@@ -9,6 +9,12 @@ angular.module('moviesearch.services', [])
         // Data
 
         // Methods
+
+        /**
+         * Call to IMDB and return a $http response with the answer
+         * @param  string title
+         * @return response
+         */
         vm.getMovieDetails = function(title) {
             var getData = {
                 method: 'jsonp',
